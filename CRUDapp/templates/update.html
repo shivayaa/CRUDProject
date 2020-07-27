@@ -1,0 +1,26 @@
+{% extends 'base.html' %}  {% block main %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDAPP</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-8 offset-2">
+
+            <h4 class="alert alert-info">UPDATE STUDENTS DETAIL</h4>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-success" value="UPDATE">
+                <a href="{% url 'addandshow' %}" class="btn btn-info">HOME</a>
+            </form>
+        </div>
+
+    </div>
+</body>
+</html>
+
+{% endblock %}
